@@ -1,0 +1,94 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item .item-group {
+  display: flex;
+  position: relative;
+}
+
+.item .item-group input {
+  position: absolute;
+  visibility: hidden;
+}
+
+.item .item-group label {
+  text-transform: capitalize;
+  padding-left: 40px;
+
+  display: flex;
+  align-items: center;
+}
+
+.item .item-group label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid;
+  border-radius: 4px;
+  transition: all .2s ease-in-out;
+  /* color: #37B5B6; */
+}
+
+.item .item-group input:checked ~ label {
+  text-decoration: line-through;
+  opacity: .8;
+  color: #7077A1;
+}
+
+.item .item-group input:checked ~ label::before {
+  transform: rotate(40deg);
+  border-left-color: transparent;
+  border-top-color: transparent;
+  border-width: 3px;
+  width: 10px;
+  height: 16px;
+  left: 5px;
+  top: -3px;
+}
+
+.item .item-group-button {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.item .item-button {
+  background-color: #bdc7ff;
+  padding: 0 5px;
+  height: 24px;
+  font-size: 12px;
+}
+.item .item-delete {
+  height: 24px;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item .item-group-edit {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+}
+.item .item-group-edit input {
+  width: 100%;
+  padding: .5rem;
+  border: thin solid #7077A1;
+  border-radius: 4px;
+  background-color: #232844;
+  outline: none;
+  color: #7077A1;
+}
+
+.item .item-group-edit button {
+  padding: .5rem;
+  height: auto;
+  min-width: 70px;
+}
